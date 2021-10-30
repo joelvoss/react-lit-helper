@@ -43,10 +43,6 @@ clean() {
   jvdx clean $*
 }
 
-release() {
-  semantic-release $*
-}
-
 default() {
   build
 }
