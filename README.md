@@ -29,7 +29,7 @@ $ ./Taskfile.sh validate
 (3) Run tests in watch-mode to validate functionality.
 
 ```bash
-$ ./Taskfile text -w
+$ ./Taskfile test -w
 ```
 
 ---
