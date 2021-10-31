@@ -5,6 +5,7 @@ export * from './create-named-context';
 export * from './focus-without-scrolling';
 export * from './get-document-dimensions';
 export * from './get-owner-document';
+export * from './is-right-click';
 export * from './make-id';
 export * from './noop';
 export * from './platform';
