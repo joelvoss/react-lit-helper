@@ -29,6 +29,9 @@ test() {
 }
 
 e2e() {
+  echo ""
+  echo "info - Running e2e tests"
+  echo ""
   export CYPRESS_CRASH_REPORTS=0
   cypress run -q
 }

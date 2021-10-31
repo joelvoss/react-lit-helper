@@ -16,3 +16,4 @@ export * from './use-isomorphic-layout-effect';
 export * from './use-prevent-scroll';
 export * from './use-previous';
 export * from './use-stable-callback';
+export * from './use-stateful-ref-value';
