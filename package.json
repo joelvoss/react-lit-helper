@@ -16,7 +16,6 @@
     "require": "./dist/helper.cjs",
     "import": "./dist/helper.modern.js"
   },
-  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE"
