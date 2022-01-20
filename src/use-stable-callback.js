@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import * as React from 'react';
 import { useIsomorphicLayoutEffect as useLayoutEffect } from './use-isomorphic-layout-effect';
 
 /**
@@ -11,12 +11,12 @@ import { useIsomorphicLayoutEffect as useLayoutEffect } from './use-isomorphic-l
  * @template T
  */
 function useStableCallbackHook(useEffectHook, callback) {
-	let callbackRef = useRef(callback);
+	let callbackRef = React.useRef(callback);
 	useEffectHook(() => {
 		callbackRef.current = callback;
 	});
 
-	return useCallback((...args) => {
+	return React.useCallback((...args) => {
 		callbackRef.current && callbackRef.current(...args);
 	}, []);
 }
@@ -24,13 +24,13 @@ function useStableCallbackHook(useEffectHook, callback) {
 /**
  * Converts a callback to a ref to avoid triggering re-renders when passed as a
  * prop and exposed as a stable function to avoid executing effects when
- * passed as a dependency. The callback is cached in `useEffect`.
+ * passed as a dependency. The callback is cached in `React.useEffect`.
  * @param {T extends (...args: any[]) => any} callback
  * @returns {T}
  * @template T
  */
 export function useStableCallback(callback) {
-	return useStableCallbackHook(useEffect, callback);
+	return useStableCallbackHook(React.useEffect, callback);
 }
 
 /**

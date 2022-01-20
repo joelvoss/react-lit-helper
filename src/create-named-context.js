@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import * as React from 'react';
 
 /**
  * createNamedContext creates a React context with a `displayName` property
@@ -9,7 +9,7 @@ import { createContext } from 'react';
  * @template T
  */
 export function createNamedContext(name, defaultValue) {
-	const Context = createContext(defaultValue);
+	const Context = React.createContext(defaultValue);
 	Context.displayName = name;
 	return Context;
 }

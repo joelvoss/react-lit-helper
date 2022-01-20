@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import * as React from 'react';
 
 /**
  * usePrevious returns the previous value of a reference after a component
@@ -8,9 +8,9 @@ import { useRef, useEffect } from 'react';
  * @template T
  */
 export function usePrevious(value) {
-	const ref = useRef(null);
+	const ref = React.useRef(null);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		ref.current = value;
 	}, [value]);
 

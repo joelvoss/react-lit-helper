@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import * as React from 'react';
 import { isFunction } from './type-check';
 
 /**
@@ -28,7 +28,7 @@ export function assignRef(ref, value) {
  * @template T
  */
 export function useComposeRefs(...refs) {
-	return useCallback(node => {
+	return React.useCallback(node => {
 		for (let ref of refs) {
 			assignRef(ref, node);
 		}

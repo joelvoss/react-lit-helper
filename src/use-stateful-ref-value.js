@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import * as React from 'react';
 
 /**
  * useStatefulRefValue
@@ -8,8 +8,8 @@ import { useState, useCallback } from 'react';
  * @template V
  */
 export function useStatefulRefValue(ref, initialState) {
-	const [state, stateSet] = useState(initialState);
-	let callbackRef = useCallback(refValue => {
+	const [state, stateSet] = React.useState(initialState);
+	let callbackRef = React.useCallback(refValue => {
 		ref.current = refValue;
 		stateSet(refValue);
 		// NOTE(joel): We can safely silence the eslint warning since `ref` is a

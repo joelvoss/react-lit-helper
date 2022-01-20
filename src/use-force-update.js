@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import * as React from 'react';
 
 /**
  * Forces a re-render, similar to `forceUpdate` in class components.
@@ -9,8 +9,8 @@ export function useForceUpdate() {
 	// equality checks when re-assigning a new value at the same time
 	// (a number counting up may eventually reach the integer boundary; instead
 	// we're using a null-object).
-	let [, dispatch] = useState(Object.create(null));
-	return useCallback(() => {
+	let [, dispatch] = React.useState(Object.create(null));
+	return React.useCallback(() => {
 		dispatch(Object.create(null));
 	}, []);
 }

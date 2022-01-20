@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import * as React from 'react';
 
 /**
  * useUpdateEffect calls an effect after a component update, skipping the
@@ -7,8 +7,8 @@ import { useRef, useEffect } from 'react';
  * @param {React.DependencyList} deps
  */
 export function useUpdateEffect(effect, deps) {
-	const mounted = useRef(false);
-	useEffect(() => {
+	const mounted = React.useRef(false);
+	React.useEffect(() => {
 		if (mounted.current) {
 			effect();
 		} else {
