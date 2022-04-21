@@ -55,7 +55,7 @@ describe(`useStableCallback`, () => {
 		const { getByRole, findByText, getByText } = render(<Component />);
 
 		const inputText = 'test';
-		userEvent.type(getByRole('textbox'), inputText);
+		await userEvent.type(getByRole('textbox'), inputText);
 
 		const outerEl = await findByText(/^reference count/i);
 		expect(outerEl.innerHTML).toBe(`reference count: ${inputText.length}`);
@@ -66,11 +66,11 @@ describe(`useStableCallback`, () => {
 		const unstableEl = await findByText(/^unstable count/i);
 		expect(unstableEl.innerHTML).toBe(`unstable count: ${inputText.length}`);
 
-		userEvent.click(getByText(/^stable trigger/i));
+		await userEvent.click(getByText(/^stable trigger/i));
 		expect(alert).toBeCalledTimes(1);
 		expect(alert).toBeCalledWith(inputText);
 
-		userEvent.click(getByText(/^unstable trigger/i));
+		await userEvent.click(getByText(/^unstable trigger/i));
 		expect(alert).toBeCalledTimes(2);
 		expect(alert).toBeCalledWith(inputText);
 	});

@@ -3,7 +3,7 @@ import { render, userEvent } from '../test-utils';
 import { usePreventScroll } from '../../src/use-prevent-scroll';
 
 describe(`usePreventScroll`, () => {
-	it(`should set proper styles on the documentElement (<body>)`, () => {
+	it(`should set proper styles on the documentElement (<body>)`, async () => {
 		const Modal = () => {
 			usePreventScroll();
 			return <div>Modal</div>;
@@ -28,7 +28,7 @@ describe(`usePreventScroll`, () => {
 		expect(document.documentElement.style.paddingRight).toBe('');
 		expect(document.documentElement.style.overflow).toBe('');
 
-		userEvent.click(getByText(/Trigger/i))
+		await userEvent.click(getByText(/Trigger/i))
 
 		expect(document.documentElement.style.paddingRight).toBe('15px');
 		expect(document.documentElement.style.overflow).toBe('hidden');

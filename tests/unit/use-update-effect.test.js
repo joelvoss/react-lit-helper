@@ -50,7 +50,7 @@ describe(`useUpdateEffect`, () => {
 		expect(effectCall).toBeCalledTimes(1);
 
 		const button = getByRole('button');
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(updateCall).toBeCalledTimes(1);
 		expect(effectCall).toBeCalledTimes(2);

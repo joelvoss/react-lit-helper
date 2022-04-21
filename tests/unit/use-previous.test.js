@@ -28,12 +28,12 @@ describe(`usePrevious`, () => {
 		expect(count.innerHTML).toBe('0');
 		expect(prevCount.innerHTML).toBe('');
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(count.innerHTML).toBe('1');
 		expect(prevCount.innerHTML).toBe('0');
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		expect(count.innerHTML).toBe('2');
 		expect(prevCount.innerHTML).toBe('1');
