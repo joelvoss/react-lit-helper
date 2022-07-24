@@ -1,8 +1,0 @@
-{
-  "viewportHeight": 600,
-  "viewportWidth": 800,
-  "screenshotOnRunFailure": false,
-  "video": false,
-  "integrationFolder": "tests/e2e",
-  "testFiles": "**/*.e2e.js"
-}

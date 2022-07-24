@@ -1,5 +1,5 @@
 export function setupTestWindow(done) {
-	cy.visit('./cypress/test-sandbox.html');
+	cy.visit('./tests/e2e/tabbable/fixtures/test-sandbox.html');
 	cy.window().then(done);
 }
 
