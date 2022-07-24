@@ -1,7 +1,7 @@
 {
   "name": "@react-lit/helper",
   "description": "Common helpers for the @react-lit component suite.",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "author": "Joel Voss <mail@joelvoss.com>",
   "license": "MIT",
   "repository": {
