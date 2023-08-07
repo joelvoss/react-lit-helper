@@ -2,7 +2,7 @@ import { isTabbable } from '../../../src/tabbable';
 import { setupTestWindow, removeAllChildNodes } from './helpers';
 import { getByTestId, getByText } from '@testing-library/dom';
 
-describe('isTabbable', () => {
+describe('isTabbable', { testIsolation: false }, () => {
 	let document;
 	before(() => {
 		setupTestWindow(testWindow => {

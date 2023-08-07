@@ -6,7 +6,7 @@ import {
 	getIdsFromElementsArray,
 } from './helpers';
 
-describe('tabbable', () => {
+describe('tabbable', { testIsolation: false }, () => {
 	let document, fixtures;
 	before(() => {
 		setupTestWindow(testWindow => {

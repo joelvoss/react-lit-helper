@@ -6,7 +6,7 @@ import {
 	getIdsFromElementsArray,
 } from './helpers';
 
-describe('focusable', () => {
+describe('focusable', { testIsolation: false }, () => {
 	let document, fixtures;
 	before(() => {
 		setupTestWindow(testWindow => {

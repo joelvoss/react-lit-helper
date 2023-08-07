@@ -2,7 +2,7 @@ import { isFocusable } from '../../../src/tabbable';
 import { setupTestWindow, removeAllChildNodes } from './helpers';
 import { getByTestId, getByText } from '@testing-library/dom';
 
-describe('isFocusable', () => {
+describe('isFocusable', { testIsolation: false }, () => {
 	let document;
 	before(() => {
 		setupTestWindow(testWindow => {
