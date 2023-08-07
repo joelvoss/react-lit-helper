@@ -12,7 +12,7 @@ jobs:
     name: Validate
     strategy:
       matrix:
-        node: [14]
+        node: [18]
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
