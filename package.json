@@ -28,12 +28,12 @@
     "prepublishOnly": "./Taskfile.sh build"
   },
   "devDependencies": {
-    "@jvdx/core": "^3.5.0",
-    "@testing-library/dom": "^9.3.1",
+    "@jvdx/core": "^3.6.0",
+    "@testing-library/dom": "^9.3.3",
     "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "cypress": "^12.17.3",
-    "jest-environment-jsdom": "^29.6.2",
+    "@testing-library/user-event": "^14.5.1",
+    "cypress": "^13.3.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
